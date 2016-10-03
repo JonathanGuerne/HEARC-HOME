@@ -28,17 +28,11 @@ a {color:#000000;}
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
     <script>
-$(document).ready(function(){
-    $("#toto").click(function(){
-        $(".table").toggle( "slow" );
-    });
-});
-$(document).ready(function(){
-    $("#tete").click(function(){
-        $("#cal").toggle( "slow" );
-    });
-});
-
+	$(document).ready(function(){
+		$("#toto").click(function(){
+			$("#cal").toggle( "slow" );
+		});
+	});
     </script>
 </head>
 <body class="tt"
@@ -81,8 +75,7 @@ $(document).ready(function(){
                 <div class="row">
                     <div class="col-md-offset-4 col-md-4">
                     </div class="input-group">
-                    <!--<button id="toto" class="btn btn-default" >Horaires 2016 - 2017</button>-->
-                    <button id="tete" class="btn btn-default"><span class="glyphicon glyphicon-calendar"></span>
+                    <button id="toto" class="btn btn-default"><span class="glyphicon glyphicon-calendar"></span>
                         Calendrier 2016 - 2017
                     </button>
                     <!--<a href="http://test" class="btn btn-default" >Webmail</a>-->
