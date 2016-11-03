@@ -28,7 +28,8 @@
 			},
 			input: "",
 			//pattern: "38384040373937396665",
-			pattern: "65663937393740403838",
+			//pattern: "65663937393740403838",
+			pattern: "836769706982",
 			
 			load: function (link) {
 				this.addEvent(document, "keydown", function (e, ref_obj) {
