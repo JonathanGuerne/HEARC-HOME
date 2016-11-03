@@ -24,6 +24,7 @@ a {color:#000000;}
           integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
     <!-- Latest compiled and minified JavaScript -->
+	<script src="konami.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
@@ -76,6 +77,11 @@ a {color:#000000;}
             $(".tt").css("background-image","url('img/"+weatherName+"-"+timeName+".jpg')");
 		});
 	};
+	    
+	    //RIP
+	    	var easter_egg = new Konami(function() { 
+	    window.location.href = "http://www.perdu.com"; //remplacez par votre code
+	});
     </script>
 </head>
 <body class="tt"
