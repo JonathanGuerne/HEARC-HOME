@@ -50,7 +50,7 @@ a {color:#000000;}
 			var weatherType = json['weather'][0]['id']; 
             var weatherName = "none";
             
-            weatherType = weatherType/100;
+            weatherType = Math.floor(weatherType/100);
             
             switch(weatherType){
                 case 2 : weatherName = "thunderstorm";
