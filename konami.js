@@ -29,7 +29,7 @@
 			input: "",
 			//pattern: "38384040373937396665",
 			//pattern: "65663937393740403838",
-			pattern: "836769706982",
+			pattern: "8367726569706983",
 			
 			load: function (link) {
 				this.addEvent(document, "keydown", function (e, ref_obj) {
