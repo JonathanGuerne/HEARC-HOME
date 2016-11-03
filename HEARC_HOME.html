@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN">
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN">
 <!-- saved from url=(0066)https://horaires.he-arc.ch/ING/Cours/Intra_Claentier_INF2dlm_a.htm -->
 <html>
 <head>
@@ -32,11 +32,54 @@ a {color:#000000;}
 		$("#toto").click(function(){
 			$("#cal").toggle( "slow" );
 		});
+        
+        DynamicsBackground();
 	});
+        
+    var DynamicsBackground = function(){
+		// Call openWeatherMap api with id 2659496
+        
+        var weatherType;
+	    var weatherTime;
+        
+		var d = new Date();
+		weatherTime = d.getHours();
+		
+		$.getJSON("http://api.openweathermap.org/data/2.5/weather?id=2659496&appid=563975760e9d8f6f9e7395f2132928a8", function(json){
+			var weatherType = json['weather'][0]['id']; 
+            var weatherName = "none";
+            
+            weatherType = weatherType/100;
+            
+            switch(weatherType){
+                case 2 : weatherName = "thunderstorm";
+                    break;
+                case 3 : weatherName = "drizzle";
+                    break;
+                case 5 : weatherName = "rain";
+                    break;
+                case 6 : weatherName = "snow";
+                    break;
+                case 8 : weatherName = "clear";
+                    break;
+            }
+            
+            var timeName;
+            
+            if(weatherTime<=5 || weatherTime >17){
+                timeName="night";
+            }
+            else{
+                timeName="day";
+            }
+            
+            $(".tt").css("background-image","url('img/"+weatherName+"-"+timeName+".jpg')");
+		});
+	};
     </script>
 </head>
 <body class="tt"
-      style="  background-image: url('http://66.media.tumblr.com/d456722f3e7fbf8a0b89405c1ee8fdfe/tumblr_ofzecpMedQ1v1wvcuo1_1280.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-position: center;  background-size: 100%; background-color:transparent;">
+      style="background-repeat: no-repeat; background-position: center; background-attachment:fixed;  background-size: auto; background-color:transparent;">
 <center><font size="2" face="Tahoma" color="#000000">
     <div class="container">
         <div class="row">
