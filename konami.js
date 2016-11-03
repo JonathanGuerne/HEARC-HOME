@@ -27,7 +27,9 @@
 				}
 			},
 			input: "",
-			pattern: "38384040373937396665",
+			//pattern: "38384040373937396665",
+			pattern: "65663937393740403838",
+			
 			load: function (link) {
 				this.addEvent(document, "keydown", function (e, ref_obj) {
 					if (ref_obj) konami = ref_obj; // IE
